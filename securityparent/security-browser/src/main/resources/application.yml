@@ -1,0 +1,20 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/shop?useUnicode=true&characterEncoding=utf8&useSSL=false
+    username: root
+    password: root
+  session:
+    store-type: none
+server:
+  port: 8080
+sscc:
+  security:
+    browserProperties:
+      loginType: JSON
+    code:
+      image:
+        width: 40           # 配置验证码图片的长
+        height: 40          # 配置验证码图片的宽
+        length: 60          # 配置验证码的长度
+        url: /user,/admin/*  #配置需要进行验证码校验的路径
